@@ -13,7 +13,7 @@ import com.jorgematheus.dslist.dto.GameMinDTO;
 import com.jorgematheus.dslist.services.GameListService;
 
 @RestController
-@RequestMapping(value = "/lists")
+@RequestMapping(value = "/games")
 public class GameController {
 
 	@Autowired
@@ -24,5 +24,4 @@ public class GameController {
 		List<GameListDTO> obj = gameListService.findAll();
 		return ResponseEntity.ok().body(obj);
 	}
-	
 }

@@ -3,23 +3,19 @@ package com.jorgematheus.dslist.dto;
 import java.io.Serializable;
 
 import com.jorgematheus.dslist.entities.Game;
+import com.jorgematheus.dslist.projections.GameMinProjection;
 
 public class GameMinDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	
+
 	private Long id;
 	private String title;
 	private Integer year;
 	private String imgUrl;
 	private String shortDescription;
-	
-	
-	
+
 	public GameMinDTO() {
 	}
-
-
 
 	public GameMinDTO(Long id, String title, Integer year, String imgUrl, String shortDescription) {
 		super();
@@ -30,13 +26,20 @@ public class GameMinDTO implements Serializable {
 		this.shortDescription = shortDescription;
 	}
 
-
 	public GameMinDTO(Game entity) {
 		this.id = entity.getId();
 		this.title = entity.getTitle();
 		this.year = entity.getYear();
 		this.imgUrl = entity.getImgUrl();
 		this.shortDescription = entity.getShortDescription();
+	}
+
+	public GameMinDTO(GameMinProjection projection) {
+		this.id = projection.getId();
+		this.title = projection.getTitle();
+		this.year = projection.getYear();
+		this.imgUrl = projection.getImgUrl();
+		this.shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
