@@ -11,8 +11,6 @@ import com.jorgematheus.dslist.dto.GameMinDTO;
 import com.jorgematheus.dslist.entities.Game;
 import com.jorgematheus.dslist.repositories.GameRepository;
 
-import jakarta.transaction.Transactional;
-
 
 @Service
 public class GameService {
@@ -31,4 +29,7 @@ public class GameService {
 		List<GameMinDTO> dto = obj.stream().map(x -> new GameMinDTO(x)).toList();
 		return dto;
 	}
+	
+	
+	
 }
