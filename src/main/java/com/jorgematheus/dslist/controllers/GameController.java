@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jorgematheus.dslist.dto.GameMinDTO;
-import com.jorgematheus.dslist.entities.Game;
 import com.jorgematheus.dslist.services.GameService;
 
 @RestController
